@@ -13,7 +13,7 @@
 
     <!-- DEFINITIONS  -->
     <definition name="cours" extends="layout">
-        <put-attribute name="title" value="Cours page" type="string"/>
+        <put-attribute name="title" value="Page de cours" type="string"/>
         <put-attribute name="content" value="/WEB-INF/jsp/views/cours.jsp"/>
     </definition>
     <!-- DEFINITIONS  -->

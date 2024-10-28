@@ -23,23 +23,24 @@ public class CoursController {
 
     private ICoursService coursService = new CoursService();
 
-    @GetMapping(name = "cours", value ="/")
+    @GetMapping("/cours")
     public String showCours(Model model) {
 
         try {
             Optional<List<CoursDto>> cours = coursService.findAll();
             if (cours.isPresent()) {
-                logger.info("Liste des cours récupérée avec succès");
+                logger.info("La liste de cours a été chargée avec succès");
                 model.addAttribute("coursList", cours.get());
+                System.out.println("debbug");
             } else {
-                logger.info("Oups il semblerait que la liste de cours soit vide");
+                logger.info("Aucun cours à afficher !");
                 model.addAttribute("coursList", new ArrayList<CoursDto>());
             }
         } catch (Exception e) {
-            logger.error("Une erreur est survenue lors de la récupération de la lsite de cours", e);
+            logger.error("La récupération de la liste de cours à échouée", e);
         }
 
-        return "views/cours";
+        return "cours";
     }
 
     @PostMapping("/cours")

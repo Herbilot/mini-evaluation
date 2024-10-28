@@ -30,8 +30,9 @@ public class SpringWebConfig implements WebMvcConfigurer {
     public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/jsp/");
+        viewResolver.setPrefix("/WEB-INF/jsp/views/");
         viewResolver.setSuffix(".jsp");
+        viewResolver.setOrder(0);
         return viewResolver;
     }
 
@@ -57,7 +58,7 @@ public class SpringWebConfig implements WebMvcConfigurer {
     public TilesViewResolver tilesViewResolver() {
         final TilesViewResolver resolver = new TilesViewResolver();
         resolver.setViewClass(TilesView.class);
-        resolver.setOrder(0);
+        resolver.setOrder(1);
         return resolver;
     }
 

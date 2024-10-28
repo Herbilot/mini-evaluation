@@ -5,7 +5,7 @@ package dev.herbidev.minievaluation;
 import dev.herbidev.minievaluation.config.SpringWebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class MyServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class ServletInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     // services and data sources
     @Override

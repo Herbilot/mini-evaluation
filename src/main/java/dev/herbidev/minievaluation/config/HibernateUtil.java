@@ -1,7 +1,6 @@
 package dev.herbidev.minievaluation.config;
 
 
-
 import dev.herbidev.minievaluation.entities.CoursEntity;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
